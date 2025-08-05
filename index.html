@@ -16,58 +16,65 @@
       font-family: 'Poppins', sans-serif;
       background: linear-gradient(135deg, #0b1527, #0f192e);
       color: #f0f2f5;
-      line-height: 1.75;
+      line-height: 1.6;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
       min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
 
     a {
       text-decoration: none;
       color: inherit;
       transition: color 0.3s ease;
+      cursor: pointer;
     }
     a:hover, a:focus {
-      color: #4f83cc;
+      color: #4f63cc;
       outline: none;
     }
 
     header {
-      background: linear-gradient(90deg, #061029, #10204b);
-      padding: 70px 25px;
+      background: linear-gradient(90deg, #051029, #10204b);
+      padding: 60px 20px 70px;
       text-align: center;
       border-bottom-left-radius: 32px;
       border-bottom-right-radius: 32px;
       box-shadow: 0 5px 20px rgba(0,0,0,0.7);
+      user-select: none;
     }
 
     header h1 {
       font-size: clamp(2.8rem, 5vw, 3.5rem);
-      margin: 0 0 12px;
+      margin: 0 0 10px;
       font-weight: 800;
-      color: #1e2e59;
+      color: #c4d0e7;
       text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+      letter-spacing: 0.03em;
     }
 
     header p {
       font-size: clamp(1.1rem, 2vw, 1.3rem);
       color: #c3cee8;
       font-weight: 500;
-      max-width: 650px;
+      max-width: 720px;
       margin: 0 auto;
       letter-spacing: 0.02em;
     }
 
     main {
-      max-width: 1400px;
-      margin: 50px auto 80px;
-      padding: 0 25px;
+      flex-grow: 1;
+      max-width: 1100px;
+      margin: 50px auto 70px;
+      padding: 0 20px;
     }
 
     section {
-      background: rgba(22, 35, 63, 0.7);
+      background: rgba(22, 35, 63, 0.75);
       border-radius: 24px;
-      padding: 40px 40px 48px;
+      padding: 40px 30px 48px;
       margin-bottom: 50px;
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
       transition: background 0.3s ease;
@@ -78,24 +85,26 @@
 
     section h2 {
       font-weight: 700;
-      font-size: clamp(1.8rem, 2.5vw, 2.4rem);
-      margin-bottom: 24px;
+      font-size: clamp(1.8rem, 2.5vw, 2.2rem);
+      margin-bottom: 22px;
       color: #c4d0e7;
       text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+      letter-spacing: 0.02em;
     }
 
     section p {
-      font-size: clamp(1rem, 1.5vw, 1.15rem);
+      font-size: clamp(1rem, 1.3vw, 1.15rem);
       color: #d0d7e6;
       margin-bottom: 20px;
       text-align: justify;
       text-justify: inter-word;
+      line-height: 1.5;
     }
 
     /* Grid for intro */
     .intro-grid {
       display: flex;
-      gap: 48px;
+      gap: 40px;
       align-items: center;
       flex-wrap: wrap;
       justify-content: center;
@@ -108,14 +117,20 @@
       object-fit: cover;
       aspect-ratio: 1 / 1;
       transition: transform 0.3s ease;
+      flex-shrink: 0;
     }
-    .intro-grid img:hover {
+    .intro-grid img:hover, .intro-grid img:focus {
       transform: scale(1.05);
+      outline: none;
     }
 
     .intro-text {
       flex: 1 1 420px;
       max-width: 700px;
+      min-width: 280px;
+    }
+    .intro-text h2 {
+      margin-top: 0;
     }
     .intro-text p em {
       color: #8ba1cc;
@@ -127,27 +142,34 @@
     .cta-container {
       text-align: center;
       margin-top: 30px;
+      display: flex;
+      justify-content: center;
+      gap: 18px;
+      flex-wrap: wrap;
     }
 
     .cta-btn {
-      display: inline-block;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
       background: linear-gradient(135deg, #163b7a, #2854a6);
       color: #f0f2f5;
-      padding: 15px 36px;
-      border-radius: 24px;
+      padding: 14px 36px;
+      border-radius: 28px;
       font-weight: 700;
       font-size: 1.15rem;
-      margin: 12px 10px;
-      box-shadow: 0 6px 12px rgba(20, 50, 110, 0.7);
+      box-shadow: 0 6px 14px rgba(20, 50, 110, 0.8);
       border: none;
-      cursor: pointer;
       user-select: none;
       transition: background 0.35s ease, box-shadow 0.35s ease;
       text-shadow: 0 0 3px rgba(0,0,0,0.4);
+      cursor: pointer;
+      text-decoration: none;
+      min-width: 180px;
     }
     .cta-btn:hover, .cta-btn:focus {
       background: linear-gradient(135deg, #2a569f, #406ab9);
-      box-shadow: 0 8px 20px rgba(32, 65, 130, 0.85);
+      box-shadow: 0 8px 22px rgba(32, 65, 130, 0.9);
       outline: none;
     }
 
@@ -155,8 +177,8 @@
     .highlight {
       background: linear-gradient(120deg, #1c2d57, #273b7d);
       border-radius: 28px;
-      padding: 50px 60px;
-      max-width: 1000px;
+      padding: 48px 50px;
+      max-width: 900px;
       margin: 70px auto 50px;
       box-shadow: 0 10px 30px rgba(20, 50, 110, 0.9);
       color: #dbe1f4;
@@ -164,12 +186,13 @@
     }
     .highlight h2 {
       margin-bottom: 24px;
-      font-size: 2.3rem;
+      font-size: 2.4rem;
       font-weight: 800;
       text-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+      letter-spacing: 0.02em;
     }
     .highlight p {
-      font-size: 1.15rem;
+      font-size: 1.18rem;
       max-width: 850px;
       margin: 0 auto 30px;
       color: #e0e7ff;
@@ -192,9 +215,11 @@
       transition: transform 0.25s ease;
       object-fit: cover;
       aspect-ratio: 4 / 3;
+      cursor: pointer;
     }
-    .gallery img:hover {
+    .gallery img:hover, .gallery img:focus {
       transform: scale(1.08);
+      outline: none;
     }
 
     /* Responsive */
@@ -203,7 +228,7 @@
         margin: 40px 15px 60px;
       }
       section {
-        padding: 32px 25px 38px;
+        padding: 32px 20px 38px;
       }
       .intro-grid {
         flex-direction: column;
@@ -215,11 +240,19 @@
         max-width: 80vw;
         width: auto;
       }
+      .cta-container {
+        gap: 14px;
+      }
+      .cta-btn {
+        min-width: 140px;
+        padding: 12px 28px;
+        font-size: 1.05rem;
+      }
     }
 
     @media (max-width: 480px) {
       body {
-        line-height: 1.5;
+        line-height: 1.4;
       }
       header h1 {
         font-size: 2.4rem;
@@ -234,10 +267,10 @@
         font-size: 1rem;
       }
       .cta-btn {
-        padding: 14px 28px;
-        font-size: 1rem;
+        padding: 12px 22px;
+        font-size: 0.95rem;
         border-radius: 20px;
-        margin: 10px 6px;
+        min-width: 120px;
       }
       .gallery {
         overflow-x: auto;
@@ -247,7 +280,7 @@
       .gallery img {
         scroll-snap-align: center;
         flex: 0 0 auto;
-        width: 200px;
+        width: 180px;
         margin-right: 14px;
       }
     }
@@ -269,7 +302,7 @@
 
 <header>
   <h1>Antoine Bucherie</h1>
-  <p>Analyste vidéo pour clubs amateurs – Nouvelle-Aquitaine & Occitanie</p>
+  <p>Analyste vidéo diplômé pour les clubs de football de Nouvelle-Aquitaine & d'Occitanie</p>
 </header>
 
 <main>
@@ -279,39 +312,39 @@
       <div class="intro-text">
         <h2 id="qui-suis-je">Qui suis-je ?</h2>
         <p>
-          Diplômé STAPS et analyste vidéo certifié, j’ai collaboré avec le <strong>FC Girondins de Bordeaux</strong> avant de proposer mes services aux <strong>clubs amateurs de Nouvelle-Aquitaine et d’Occitanie</strong>. Mon objectif : vous fournir un regard technique, structuré et extérieur, pour soutenir votre projet sportif avec rigueur et engagement.
+          Diplômé STAPS et analyste vidéo à l'Université de Bordeaux, j’ai collaboré avec le <strong>FC Girondins de Bordeaux</strong> avant d'étendre mes services aux <strong>clubs amateurs de Nouvelle-Aquitaine et d’Occitanie</strong>. Mon objectif : vous fournir un regard technique, structuré et extérieur, pour soutenir votre projet sportif avec rigueur et engagement.
         </p>
-        <p><em>TVA non applicable – Statut auto-entrepreneur</em></p>
+        <p><em>Tarifs attractifs et TVA non applicable</em></p>
       </div>
     </div>
     <div class="cta-container" role="group" aria-label="Contacts pour Antoine Bucherie">
-      <a class="cta-btn" href="sms:+33612345678" aria-label="Envoyer un SMS à Antoine">📩 Envoyer un SMS</a>
-      <a class="cta-btn" href="tel:+33612345678" aria-label="Appeler Antoine">📞 Appeler Antoine</a>
+      <a class="cta-btn" href="sms:+33612345678" aria-label="Envoyer un SMS à Antoine"> Envoyer un SMS</a>
+      <a class="cta-btn" href="tel:+33612345678" aria-label="Appelons-nous"> Appelons-nous</a>
     </div>
   </section>
 
   <section aria-labelledby="analyse-collective">
     <h2 id="analyse-collective">Analyse vidéo collective</h2>
     <p>
-      Un accompagnement visuel et structuré tout au long de la saison : analyse de vos matchs pour identifier axes d’amélioration, mettre en valeur vos forces et renforcer votre projet de jeu. Vous bénéficiez de rapports clairs, séquences commentées, et suivi à distance comme un membre du staff.
+      Un accompagnement visuel et structuré tout au long de la saison : analyse de vos matchs pour identifier axes d’amélioration, mettre en valeur vos forces et renforcer votre projet de jeu. Vous bénéficiez de rapports clairs, séquences commentées, et suivi ultra personnalisé. C'est comme un membre du staff supplémentaire.
     </p>
     <div class="gallery" aria-label="Images illustration analyse vidéo collective">
-      <img src="https://source.unsplash.com/260x195/?football,tactics" alt="Analyse tactique d'une équipe de football" />
-      <img src="https://source.unsplash.com/260x195/?football,match" alt="Match de football en action" />
-      <img src="https://source.unsplash.com/260x195/?video,analysis" alt="Analyse vidéo sportive" />
+      <img src="photo2.jpg" alt="Analyse tactique d'une équipe de football" />
+      <img src="photo3.jpg" alt="Match de football en action" />
+      <img src="photo4.jpg" alt="Analyse vidéo sportive" />
     </div>
     <div class="cta-container">
-      <a class="cta-btn" href="sms:+33612345678" aria-label="Travailler avec Antoine pour analyse collective">📩 Travailler avec Antoine</a>
+      <a class="cta-btn" href="sms:+33612345678" aria-label="Travailler avec Antoine pour analyse collective">Discutons-en ensemble</a>
     </div>
   </section>
 
-  <section class="highlight" aria-labelledby="matchs-decisifs">
-    <h2 id="matchs-decisifs">Matchs décisifs à préparer ?</h2>
+  <section aria-labelledby="analyse-collective">
+    <h2 id="analyse-collective">Un match décisif à préparer ?</h2>
     <p>
-      Pour un match crucial en vue du maintien ou de la montée, chaque détail compte. J’élabore une analyse ciblée et pragmatique qui permet à vos joueurs d’aborder la rencontre avec lucidité, clarté tactique et confiance.
+      Pour un match crucial en vue du maintien ou de la montée, chaque détail compte. J’élabore une analyse ciblée et pragmatique qui permet à vos joueurs d’aborder la rencontre avec lucidité, clarté tactique et confiance : l'analyse vidéo peut changer drastiquement l'issue de votre saison.
     </p>
     <div class="cta-container">
-      <a class="cta-btn" href="tel:+33612345678" aria-label="Discuter avec Antoine pour préparation de match">📞 Discuter avec Antoine</a>
+      <a class="cta-btn" href="tel:+33612345678" aria-label="Discuter avec Antoine pour préparation de match">Contactez-moi</a>
     </div>
   </section>
 
@@ -321,11 +354,11 @@
       Identifier les points faibles, anticiper les habitudes, surprendre l’adversaire : je propose une étude complète de vos prochains opposants, vous permettant d’adapter votre plan de jeu pour prendre l’avantage dès les premières minutes.
     </p>
     <div class="gallery" aria-label="Images illustration analyse adversaire">
-      <img src="https://source.unsplash.com/260x195/?football,opponent" alt="Analyse des adversaires en football" />
-      <img src="https://source.unsplash.com/260x195/?football,strategy" alt="Stratégie d'équipe en football" />
+      <img src="photo5.jpg" alt="Analyse des adversaires en football" />
+      <img src="photo2.jpg" alt="Stratégie d'équipe en football" />
     </div>
     <div class="cta-container">
-      <a class="cta-btn" href="sms:+33612345678" aria-label="Commander une analyse adversaire">📩 Commander une analyse adverse</a>
+      <a class="cta-btn" href="sms:+33612345678" aria-label="Commander une analyse adversaire">Commander une analyse adverse</a>
     </div>
   </section>
 
@@ -335,11 +368,11 @@
       Valoriser un joueur, améliorer sa lecture de jeu ou cibler un poste : une analyse personnalisée met en lumière les forces et axes de progression. Outil idéal pour accompagner formation ou retour à la compétition.
     </p>
     <div class="gallery" aria-label="Images illustration analyse individuelle">
-      <img src="https://source.unsplash.com/260x195/?football,player" alt="Analyse individuelle d'un joueur de football" />
-      <img src="https://source.unsplash.com/260x195/?football,training" alt="Entraînement individuel football" />
+      <img src="photo3.jpg" alt="Analyse individuelle d'un joueur de football" />
+      <img src="photo4.jpg" alt="Entraînement individuel football" />
     </div>
     <div class="cta-container">
-      <a class="cta-btn" href="tel:+33612345678" aria-label="Échanger sur un joueur">📞 Échanger sur un joueur</a>
+      <a class="cta-btn" href="tel:+33612345678" aria-label="Échanger sur un joueur">Parlons-en ensemble</a>
     </div>
   </section>
 </main>
