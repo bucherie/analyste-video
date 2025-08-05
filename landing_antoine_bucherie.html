@@ -1,90 +1,124 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Antoine Bucherie - Analyse Vidéo Football</title>
+  <title>Antoine Bucherie – Analyste Vidéo Football</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #0d1117;
-      color: white;
-      line-height: 1.6;
+      font-family: 'Poppins', sans-serif;
+      background-color: #0e1117;
+      color: #ffffff;
+      line-height: 1.7;
     }
+
     a {
       text-decoration: none;
       color: inherit;
     }
+
     header {
       background-color: #0a0f1c;
-      padding: 40px 20px;
+      padding: 60px 20px;
       text-align: center;
     }
+
     header h1 {
-      margin: 0;
-      font-size: 2.5rem;
-      color: #ffffff;
+      font-size: 3rem;
+      margin-bottom: 10px;
+      font-weight: 700;
     }
+
     header p {
       font-size: 1.2rem;
-      color: #d1d5db;
+      color: #9ca3af;
     }
+
     .section {
       padding: 60px 20px;
-      max-width: 1000px;
+      max-width: 1100px;
       margin: auto;
     }
-    .section h2 {
+
+    h2 {
       font-size: 2rem;
+      font-weight: 600;
       margin-bottom: 20px;
       color: #ffffff;
     }
-    .section p {
-      font-size: 1.1rem;
+
+    p {
+      font-size: 1.05rem;
+      color: #d1d5db;
       text-align: justify;
-      color: #e5e7eb;
     }
+
     .intro-grid {
       display: flex;
       flex-wrap: wrap;
       align-items: center;
-      gap: 30px;
+      gap: 40px;
     }
+
     .intro-grid img {
-      border-radius: 12px;
-      max-width: 300px;
+      border-radius: 16px;
       width: 100%;
+      max-width: 320px;
     }
+
+    .cta-container {
+      text-align: center;
+      margin-top: 30px;
+    }
+
     .cta-btn {
       display: inline-block;
-      background-color: #1e40af;
+      background-color: #2563eb;
       color: white;
-      padding: 14px 24px;
-      border-radius: 8px;
-      font-size: 1.1rem;
-      margin: 20px 0;
-      transition: background-color 0.3s;
+      padding: 14px 28px;
+      border-radius: 12px;
+      font-size: 1rem;
+      font-weight: 600;
+      margin: 10px;
+      transition: background-color 0.3s ease;
     }
+
     .cta-btn:hover {
       background-color: #3b82f6;
     }
-    .cta-container {
-      text-align: center;
-    }
+
     .highlight {
       background-color: #1f2937;
-      padding: 40px 20px;
-      border-radius: 12px;
-      margin: 60px auto;
+      border-radius: 16px;
+      padding: 50px 30px;
+      margin: 80px auto;
       max-width: 1000px;
     }
+
+    .highlight h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
     footer {
       text-align: center;
-      padding: 30px 20px;
+      padding: 40px 20px;
       font-size: 0.9rem;
       color: #9ca3af;
+      background-color: #0a0f1c;
+    }
+
+    @media (max-width: 768px) {
+      .intro-grid {
+        flex-direction: column;
+        text-align: center;
+      }
     }
   </style>
 </head>
@@ -92,18 +126,18 @@
 
   <header>
     <h1>Antoine Bucherie</h1>
-    <p>Analyse vidéo pour clubs amateurs de Nouvelle-Aquitaine & Occitanie</p>
+    <p>Analyste vidéo pour clubs amateurs – Nouvelle-Aquitaine & Occitanie</p>
   </header>
 
   <section class="section">
     <div class="intro-grid">
-      <img src="https://source.unsplash.com/300x300/?portrait,man,coach" alt="Antoine Bucherie">
+      <img src="https://source.unsplash.com/300x300/?portrait,man,coach" alt="Photo d'Antoine Bucherie">
       <div>
         <h2>Qui suis-je ?</h2>
         <p>
-          Diplômé STAPS et titulaire d’un diplôme d’analyste vidéo, j’ai collaboré avec le <strong>FC Girondins de Bordeaux</strong> en tant qu’analyste vidéo. Aujourd’hui, je propose mes services aux <strong>clubs amateurs de Nouvelle-Aquitaine et d’Occitanie</strong> en tant que soutien technique, structuré et professionnel.
+          Diplômé STAPS et analyste vidéo certifié, j’ai travaillé avec le <strong>FC Girondins de Bordeaux</strong> avant de proposer mes services aux <strong>clubs amateurs de Nouvelle-Aquitaine et d’Occitanie</strong>. Mon objectif : vous apporter un regard technique, structuré et extérieur, pour soutenir votre projet sportif avec rigueur et engagement.
         </p>
-        <p><strong>TVA non applicable, auto-entrepreneur</strong></p>
+        <p><em>TVA non applicable – Statut auto-entrepreneur</em></p>
       </div>
     </div>
     <div class="cta-container">
@@ -115,7 +149,7 @@
   <section class="section">
     <h2>Analyse vidéo collective</h2>
     <p>
-      Offrez à votre staff un regard expert supplémentaire. J’analyse vos matchs tout au long de la saison, avec un suivi continu. Rapports structurés, points d’amélioration clairs, séquences commentées — je deviens un véritable membre du staff à distance, au service de vos ambitions.
+      Un soutien visuel et structuré tout au long de la saison. Je vous accompagne dans l’analyse de vos matchs pour identifier les axes d’amélioration, mettre en valeur vos points forts et renforcer votre projet de jeu. Vous bénéficiez de rapports clairs, de séquences commentées, et d’un suivi à distance comme un membre du staff.
     </p>
     <div class="cta-container">
       <a class="cta-btn" href="sms:+33612345678">📩 Travailler avec Antoine</a>
@@ -123,9 +157,9 @@
   </section>
 
   <section class="highlight">
-    <h2 style="text-align:center;">Matchs décisifs pour le maintien ou la montée ?</h2>
-    <p style="text-align:justify;">
-      Maximisez vos chances avec une analyse ciblée. Chaque détail compte dans les moments clés. Grâce à une préparation vidéo rigoureuse, vos joueurs abordent le match avec confiance et clarté.
+    <h2>Matchs décisifs à préparer ?</h2>
+    <p>
+      Pour un match crucial en vue du maintien ou de la montée, chaque détail compte. J’élabore une analyse ciblée et pragmatique qui permet à vos joueurs d’aborder la rencontre avec lucidité, clarté tactique et confiance.
     </p>
     <div class="cta-container">
       <a class="cta-btn" href="tel:+33612345678">📞 Discuter avec Antoine</a>
@@ -135,7 +169,7 @@
   <section class="section">
     <h2>Analyse de l’adversaire</h2>
     <p>
-      Anticipez, surprenez, dominez. Grâce à une étude complète de l’équipe adverse, vous connaîtrez ses forces, ses failles, ses schémas récurrents et ses habitudes. Prenez l’ascendant avant même le coup d’envoi.
+      Identifier les points faibles, anticiper les habitudes, surprendre l’adversaire : je vous propose une étude complète de vos prochains opposants. Elle vous permettra d’adapter votre plan de jeu pour prendre l’avantage dès les premières minutes.
     </p>
     <div class="cta-container">
       <a class="cta-btn" href="sms:+33612345678">📩 Commander une analyse adverse</a>
@@ -143,9 +177,9 @@
   </section>
 
   <section class="section">
-    <h2>Focus sur la performance individuelle</h2>
+    <h2>Analyse individuelle</h2>
     <p>
-      Chaque joueur est unique. Grâce à une analyse personnalisée, je mets en lumière les atouts et axes de progression de vos éléments clés. Idéal pour valoriser un joueur, corriger des habitudes ou mieux cibler un poste.
+      Valoriser un joueur, améliorer sa lecture de jeu ou cibler un poste : une analyse personnalisée met en lumière les forces et les axes de progression. Outil idéal pour accompagner la formation ou le retour à la compétition.
     </p>
     <div class="cta-container">
       <a class="cta-btn" href="tel:+33612345678">📞 Échanger sur un joueur</a>
@@ -153,7 +187,7 @@
   </section>
 
   <footer>
-    © 2025 Antoine Bucherie – Analyse Vidéo Football – Nouvelle-Aquitaine & Occitanie
+    © 2025 Antoine Bucherie – Analyste Vidéo Football – Nouvelle-Aquitaine & Occitanie
   </footer>
 
 </body>
