@@ -1,496 +1,675 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Antoine Bucherie – Analyste Vidéo Football</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
-  <style>
-    *, *::before, *::after {
-      box-sizing: border-box;
-    }
+{\rtf1\ansi\ansicpg1252\cocoartf2639
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 AppleColorEmoji;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww33400\viewh21000\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
 
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background: linear-gradient(135deg, #0b1527, #0f192e);
-      color: #f0f2f5;
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-      transition: color 0.3s ease;
-      cursor: pointer;
-    }
-    a:hover, a:focus {
-      color: #4f63cc;
-      outline: none;
-    }
-
-    header {
-      background: linear-gradient(90deg, #051029, #10204b);
-      padding: 60px 20px 70px;
-      text-align: center;
-      border-bottom-left-radius: 32px;
-      border-bottom-right-radius: 32px;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.7);
-      user-select: none;
-    }
-
-    header h1 {
-      font-size: clamp(2.8rem, 5vw, 3.5rem);
-      margin: 0 0 10px;
-      font-weight: 800;
-      color: #c4d0e7;
-      text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
-      letter-spacing: 0.03em;
-    }
-
-    header p {
-      font-size: clamp(1.1rem, 2vw, 1.3rem);
-      color: #c3cee8;
-      font-weight: 500;
-      max-width: 720px;
-      margin: 0 auto;
-      letter-spacing: 0.02em;
-    }
-
-    main {
-      flex-grow: 1;
-      max-width: 1100px;
-      margin: 50px auto 70px;
-      padding: 0 20px;
-    }
-
-    section {
-      background: rgba(22, 35, 63, 0.75);
-      border-radius: 24px;
-      padding: 40px 30px 48px;
-      margin-bottom: 50px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-      transition: background 0.3s ease;
-    }
-
-    section:hover {
-      background: rgba(30, 45, 75, 0.85);
-    }
-
-    section h2 {
-      font-weight: 700;
-      font-size: clamp(1.8rem, 2.5vw, 2.2rem);
-      margin-bottom: 22px;
-      color: #c4d0e7;
-      text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
-      letter-spacing: 0.02em;
-    }
-
-    section p {
-      font-size: clamp(1rem, 1.3vw, 1.15rem);
-      color: #d0d7e6;
-      margin-bottom: 20px;
-      text-align: justify;
-      text-justify: inter-word;
-      line-height: 1.5;
-    }
-
-    .intro-grid {
-      display: flex;
-      gap: 40px;
-      align-items: center;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-
-    .intro-grid img {
-      border-radius: 28px;
-      width: 320px;
-      max-width: 90vw;
-      box-shadow: 0 6px 18px rgba(13, 33, 73, 0.7);
-      object-fit: cover;
-      aspect-ratio: 1 / 1;
-      transition: transform 0.3s ease;
-      flex-shrink: 0;
-    }
-
-    .intro-grid img:hover, .intro-grid img:focus {
-      transform: scale(1.05);
-      outline: none;
-    }
-
-    .intro-text {
-      flex: 1 1 420px;
-      max-width: 700px;
-      min-width: 280px;
-    }
-
-    .intro-text h2 {
-      margin-top: 0;
-    }
-
-    .intro-text p em {
-      color: #8ba1cc;
-      font-style: italic;
-      font-weight: 500;
-    }
-
-    .cta-container {
-      text-align: center;
-      margin-top: 30px;
-      display: flex;
-      justify-content: center;
-      gap: 18px;
-      flex-wrap: wrap;
-    }
-
-    .cta-btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      background: linear-gradient(135deg, #163b7a, #2854a6);
-      color: #f0f2f5;
-      padding: 14px 36px;
-      border-radius: 28px;
-      font-weight: 700;
-      font-size: 1.15rem;
-      box-shadow: 0 6px 14px rgba(20, 50, 110, 0.8);
-      border: none;
-      user-select: none;
-      transition: background 0.35s ease, box-shadow 0.35s ease;
-      text-shadow: 0 0 3px rgba(0,0,0,0.4);
-      cursor: pointer;
-      text-decoration: none;
-      min-width: 180px;
-    }
-
-    .cta-btn:hover, .cta-btn:focus {
-      background: linear-gradient(135deg, #2a569f, #406ab9);
-      box-shadow: 0 8px 22px rgba(32, 65, 130, 0.9);
-      outline: none;
-    }
-
-    .highlight {
-      background: linear-gradient(120deg, #1c2d57, #273b7d);
-      border-radius: 28px;
-      padding: 48px 50px;
-      max-width: 900px;
-      margin: 70px auto 50px;
-      box-shadow: 0 10px 30px rgba(20, 50, 110, 0.9);
-      color: #dbe1f4;
-      text-align: center;
-    }
-
-    .highlight h2 {
-      margin-bottom: 24px;
-      font-size: 2.4rem;
-      font-weight: 800;
-      text-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
-      letter-spacing: 0.02em;
-    }
-
-    .highlight p {
-      font-size: 1.18rem;
-      max-width: 850px;
-      margin: 0 auto 30px;
-      color: #e0e7ff;
-      line-height: 1.6;
-    }
-
-    .gallery {
-      display: flex;
-      gap: 24px;
-      justify-content: center;
-      flex-wrap: wrap;
-      margin-top: 25px;
-    }
-
-    .gallery img {
-      border-radius: 20px;
-      width: 260px;
-      max-width: 90vw;
-      box-shadow: 0 6px 20px rgba(10, 25, 60, 0.7);
-      transition: transform 0.25s ease;
-      object-fit: cover;
-      aspect-ratio: 4 / 3;
-      cursor: pointer;
-    }
-
-    .gallery img:hover, .gallery img:focus {
-      transform: scale(1.08);
-      outline: none;
-    }
-
-    /* Responsive */
-    @media (max-width: 900px) {
-      main {
-        margin: 30px 12px 50px;
-        padding: 0;
-      }
-
-      section {
-        padding: 24px 16px 30px;
-        margin-bottom: 40px;
-      }
-
-      .intro-grid {
-        flex-direction: column;
-        gap: 24px;
-      }
-
-      .intro-grid img {
-        max-width: 100%;
-        width: auto;
-      }
-
-      .intro-text {
-        padding: 0 8px;
-        max-width: 100%;
-        text-align: justify;
-      }
-
-      .cta-container {
-        flex-direction: column;
-        align-items: center;
-        gap: 12px;
-      }
-
-      .cta-btn {
-        width: 100%;
-        max-width: 320px;
-        padding: 12px 20px;
-        font-size: 1rem;
-        border-radius: 24px;
-      }
-
-      .gallery {
-        justify-content: center;
-        gap: 16px;
-      }
-
-      .gallery img {
-        width: 100%;
-        max-width: 300px;
-        height: auto;
-        aspect-ratio: auto;
-      }
-    }
-
-    @media (max-width: 480px) {
-      body {
-        line-height: 1.4;
-        padding: 0;
-      }
-
-      header h1 {
-        font-size: 2.2rem;
-      }
-
-      header p {
-        font-size: 0.95rem;
-        padding: 0 10px;
-      }
-
-      section h2 {
-        font-size: 1.5rem;
-        text-align: center;
-      }
-
-      section p {
-        font-size: 0.95rem;
-      }
-
-      .cta-btn {
-        font-size: 0.95rem;
-        padding: 10px 18px;
-        min-width: unset;
-      }
-
-      .gallery {
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
-        scroll-snap-type: x mandatory;
-        padding-left: 8px;
-      }
-
-      .gallery img {
-        scroll-snap-align: center;
-        flex: 0 0 auto;
-        width: 180px;
-        margin-right: 12px;
-      }
-
-      .highlight {
-        padding: 30px 16px;
-      }
-
-      .highlight h2 {
-        font-size: 1.8rem;
-      }
-
-      .highlight p {
-        font-size: 1rem;
-      }
-    }
-
-    footer {
-      background: linear-gradient(90deg, #061029, #10204b);
-      text-align: center;
-      padding: 40px 20px;
-      font-size: 0.9rem;
-      color: #9ca3af;
-      border-top-left-radius: 32px;
-      border-top-right-radius: 32px;
-      box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.3);
-      user-select: none;
-    }
-  </style>
-</head>
-<body>
-
-<header>
-  <h1>Antoine Bucherie</h1>
-  <p>Analyste vidéo diplômé pour les clubs de football de Nouvelle-Aquitaine & d'Occitanie</p>
-</header>
-
-<main>
-  <section aria-labelledby="qui-suis-je">
-  <div class="intro-grid">
-    <img src="photo1.JPG" alt="Photo professionnelle d'Antoine Bucherie" />
-    <div class="intro-text">
-      <h2 id="qui-suis-je">Qui suis-je ?</h2>
-      <p>
-        Diplômé STAPS et analyste vidéo à l'Université de Bordeaux, j’ai collaboré avec le <strong>FC Girondins de Bordeaux</strong> avant d'étendre mes services aux <strong>clubs amateurs de Nouvelle-Aquitaine et d’Occitanie</strong>. Mon objectif : vous fournir un regard technique, structuré et extérieur, pour soutenir votre projet sportif avec rigueur et engagement.
-      </p>
-      <p><em>Tarifs attractifs et TVA non applicable</em></p>
+\f0\fs24 \cf0 <!DOCTYPE html>\
+<html lang="fr">\
+<head>\
+  <meta charset="UTF-8" />\
+  <meta name="viewport" content="width=device-width, initial-scale=1" />\
+  <title>Antoine Bucherie \'96 Analyste Vid\'e9o Football</title>\
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />\
+  <style>\
+    *, *::before, *::after \{\
+      box-sizing: border-box;\
+    \}\
+\
+    body \{\
+      margin: 0;\
+      font-family: 'Poppins', sans-serif;\
+      background: linear-gradient(135deg, #0b1527, #0f192e);\
+      color: #f0f2f5;\
+      line-height: 1.6;\
+      -webkit-font-smoothing: antialiased;\
+      -moz-osx-font-smoothing: grayscale;\
+      min-height: 100vh;\
+      display: flex;\
+      flex-direction: column;\
+      justify-content: space-between;\
+    \}\
+\
+    a \{\
+      text-decoration: none;\
+      color: inherit;\
+      transition: color 0.3s ease;\
+      cursor: pointer;\
+    \}\
+    a:hover, a:focus \{\
+      color: #4f63cc;\
+      outline: none;\
+    \}\
+\
+    header \{\
+      background: linear-gradient(90deg, #051029, #10204b);\
+      padding: 60px 20px 70px;\
+      text-align: center;\
+      border-bottom-left-radius: 32px;\
+      border-bottom-right-radius: 32px;\
+      box-shadow: 0 5px 20px rgba(0,0,0,0.7);\
+      user-select: none;\
+    \}\
+\
+    header h1 \{\
+      font-size: clamp(2.8rem, 5vw, 3.5rem);\
+      margin: 0 0 10px;\
+      font-weight: 800;\
+      color: #c4d0e7;\
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.7);\
+      letter-spacing: 0.03em;\
+    \}\
+\
+    header p \{\
+      font-size: clamp(1.1rem, 2vw, 1.3rem);\
+      color: #c3cee8;\
+      font-weight: 500;\
+      max-width: 720px;\
+      margin: 0 auto;\
+      letter-spacing: 0.02em;\
+    \}\
+\
+    main \{\
+      flex-grow: 1;\
+      max-width: 1100px;\
+      margin: 50px auto 70px;\
+      padding: 0 20px;\
+    \}\
+\
+    section \{\
+      background: rgba(22, 35, 63, 0.75);\
+      border-radius: 24px;\
+      padding: 40px 30px 48px;\
+      margin-bottom: 50px;\
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);\
+      transition: background 0.3s ease;\
+    \}\
+\
+    section:hover \{\
+      background: rgba(30, 45, 75, 0.85);\
+    \}\
+\
+    section h2 \{\
+      font-weight: 700;\
+      font-size: clamp(1.8rem, 2.5vw, 2.2rem);\
+      margin-bottom: 22px;\
+      color: #c4d0e7;\
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.4);\
+      letter-spacing: 0.02em;\
+    \}\
+\
+    section p \{\
+      font-size: clamp(1rem, 1.3vw, 1.15rem);\
+      color: #d0d7e6;\
+      margin-bottom: 20px;\
+      text-align: justify;\
+      text-justify: inter-word;\
+      line-height: 1.5;\
+    \}\
+\
+    .intro-grid \{\
+      display: flex;\
+      gap: 40px;\
+      align-items: center;\
+      flex-wrap: wrap;\
+      justify-content: center;\
+    \}\
+\
+    .intro-grid img \{\
+      border-radius: 28px;\
+      width: 320px;\
+      max-width: 90vw;\
+      box-shadow: 0 6px 18px rgba(13, 33, 73, 0.7);\
+      object-fit: cover;\
+      aspect-ratio: 1 / 1;\
+      transition: transform 0.3s ease;\
+      flex-shrink: 0;\
+    \}\
+\
+    .intro-grid img:hover, .intro-grid img:focus \{\
+      transform: scale(1.05);\
+      outline: none;\
+    \}\
+\
+    .intro-text \{\
+      flex: 1 1 420px;\
+      max-width: 700px;\
+      min-width: 280px;\
+    \}\
+\
+    .intro-text h2 \{\
+      margin-top: 0;\
+    \}\
+\
+    .intro-text p em \{\
+      color: #8ba1cc;\
+      font-style: italic;\
+      font-weight: 500;\
+    \}\
+\
+    .cta-container \{\
+      text-align: center;\
+      margin-top: 30px;\
+      display: flex;\
+      justify-content: center;\
+      gap: 18px;\
+      flex-wrap: wrap;\
+    \}\
+\
+    .cta-btn \{\
+      display: inline-flex;\
+      align-items: center;\
+      justify-content: center;\
+      background: linear-gradient(135deg, #163b7a, #2854a6);\
+      color: #f0f2f5;\
+      padding: 14px 36px;\
+      border-radius: 28px;\
+      font-weight: 700;\
+      font-size: 1.15rem;\
+      box-shadow: 0 6px 14px rgba(20, 50, 110, 0.8);\
+      border: none;\
+      user-select: none;\
+      transition: background 0.35s ease, box-shadow 0.35s ease;\
+      text-shadow: 0 0 3px rgba(0,0,0,0.4);\
+      cursor: pointer;\
+      text-decoration: none;\
+      min-width: 180px;\
+    \}\
+\
+    .cta-btn:hover, .cta-btn:focus \{\
+      background: linear-gradient(135deg, #2a569f, #406ab9);\
+      box-shadow: 0 8px 22px rgba(32, 65, 130, 0.9);\
+      outline: none;\
+    \}\
+\
+    .highlight \{\
+      background: linear-gradient(120deg, #1c2d57, #273b7d);\
+      border-radius: 28px;\
+      padding: 48px 50px;\
+      max-width: 900px;\
+      margin: 70px auto 50px;\
+      box-shadow: 0 10px 30px rgba(20, 50, 110, 0.9);\
+      color: #dbe1f4;\
+      text-align: center;\
+    \}\
+\
+    .highlight h2 \{\
+      margin-bottom: 24px;\
+      font-size: 2.4rem;\
+      font-weight: 800;\
+      text-shadow: 0 0 6px rgba(0, 0, 0, 0.5);\
+      letter-spacing: 0.02em;\
+    \}\
+\
+    .highlight p \{\
+      font-size: 1.18rem;\
+      max-width: 850px;\
+      margin: 0 auto 30px;\
+      color: #e0e7ff;\
+      line-height: 1.6;\
+    \}\
+\
+    .gallery \{\
+      display: flex;\
+      gap: 24px;\
+      justify-content: center;\
+      flex-wrap: wrap;\
+      margin-top: 25px;\
+    \}\
+\
+    .gallery img \{\
+      border-radius: 20px;\
+      width: 260px;\
+      max-width: 90vw;\
+      box-shadow: 0 6px 20px rgba(10, 25, 60, 0.7);\
+      transition: transform 0.25s ease;\
+      object-fit: cover;\
+      aspect-ratio: 4 / 3;\
+      cursor: pointer;\
+    \}\
+\
+    .gallery img:hover, .gallery img:focus \{\
+      transform: scale(1.08);\
+      outline: none;\
+    \}\
+\
+    /* Responsive */\
+    @media (max-width: 900px) \{\
+      main \{\
+        margin: 30px 12px 50px;\
+        padding: 0;\
+      \}\
+\
+      section \{\
+        padding: 24px 16px 30px;\
+        margin-bottom: 40px;\
+      \}\
+\
+      .intro-grid \{\
+        flex-direction: column;\
+        gap: 24px;\
+      \}\
+\
+      .intro-grid img \{\
+        max-width: 100%;\
+        width: auto;\
+      \}\
+\
+      .intro-text \{\
+        padding: 0 8px;\
+        max-width: 100%;\
+        text-align: justify;\
+      \}\
+\
+      .cta-container \{\
+        flex-direction: column;\
+        align-items: center;\
+        gap: 12px;\
+      \}\
+\
+      .cta-btn \{\
+        width: 100%;\
+        max-width: 320px;\
+        padding: 12px 20px;\
+        font-size: 1rem;\
+        border-radius: 24px;\
+      \}\
+\
+      .gallery \{\
+        justify-content: center;\
+        gap: 16px;\
+      \}\
+\
+      .gallery img \{\
+        width: 100%;\
+        max-width: 300px;\
+        height: auto;\
+        aspect-ratio: auto;\
+      \}\
+    \}\
+\
+    @media (max-width: 480px) \{\
+      body \{\
+        line-height: 1.4;\
+        padding: 0;\
+      \}\
+\
+      header h1 \{\
+        font-size: 2.2rem;\
+      \}\
+\
+      header p \{\
+        font-size: 0.95rem;\
+        padding: 0 10px;\
+      \}\
+\
+      section h2 \{\
+        font-size: 1.5rem;\
+        text-align: center;\
+      \}\
+\
+      section p \{\
+        font-size: 0.95rem;\
+      \}\
+\
+      .cta-btn \{\
+        font-size: 0.95rem;\
+        padding: 10px 18px;\
+        min-width: unset;\
+      \}\
+\
+      .gallery \{\
+        overflow-x: auto;\
+        -webkit-overflow-scrolling: touch;\
+        scroll-snap-type: x mandatory;\
+        padding-left: 8px;\
+      \}\
+\
+      .gallery img \{\
+        scroll-snap-align: center;\
+        flex: 0 0 auto;\
+        width: 180px;\
+        margin-right: 12px;\
+      \}\
+\
+      .highlight \{\
+        padding: 30px 16px;\
+      \}\
+\
+      .highlight h2 \{\
+        font-size: 1.8rem;\
+      \}\
+\
+      .highlight p \{\
+        font-size: 1rem;\
+      \}\
+    \}\
+\
+    footer \{\
+      background: linear-gradient(90deg, #061029, #10204b);\
+      text-align: center;\
+      padding: 40px 20px;\
+      font-size: 0.9rem;\
+      color: #9ca3af;\
+      border-top-left-radius: 32px;\
+      border-top-right-radius: 32px;\
+      box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.3);\
+      user-select: none;\
+    \}\
+  </style>\
+</head>\
+<body>\
+\
+<header>\
+  <h1>Antoine Bucherie</h1>\
+  <p>L\'92analyse vid\'e9o au service des clubs amateurs et semi-pro</p>\
+</header>\
+\
+<!-- Nouvelle section mise en avant -->\
+<section aria-labelledby="valeur-analyse" class="highlight-section" style="padding: 1.5rem 0;">\
+  <div class="highlight-text" style="max-width: 800px; margin: 0 auto; padding: 0 1rem;">\
+    <h2 id="valeur-analyse">L\'92analyse vid\'e9o peut tout changer</h2>\
+    <p>\
+      Une bonne analyse peut faire la diff\'e9rence, parfois elle peut m\'eame changer le cours de votre saison.\
+    </p>\
+    <p>\
       
-      <!-- Boutons rapprochés -->
-      <div class="cta-container" role="group" aria-label="Contacts pour Antoine Bucherie" style="margin-top: 10px;">
-        <a class="cta-btn" href="sms:+33612345678">Envoyer un SMS</a>
-        <a class="cta-btn" href="tel:+33612345678">Appelons-nous</a>
-  </div>
-</section>
-
-  
-<section aria-labelledby="grands-en-parlent">
-  <h2 id="grands-en-parlent">Les plus grands en parlent</h2>
-  <div style="
-    display: flex;
-    overflow-x: auto;
-    gap: 24px;
-    scroll-snap-type: x mandatory;
-    padding: 16px 0;
-    -webkit-overflow-scrolling: touch;
-  ">
-    <div style="
-      flex: 0 0 280px;
-      background: rgba(30, 45, 75, 0.85);
-      border-radius: 24px;
-      padding: 20px;
-      scroll-snap-align: start;
-      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
-      text-align: center;
-    ">
-      <img src="guardiola.png" alt="Pep Guardiola" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; margin-bottom: 16px;" />
-      <p style="color: #d0d7e6; font-style: italic;">"L’analyse vidéo est aujourd’hui indispensable. Elle permet de comprendre le jeu sous un autre angle."</p>
-      <p style="margin-top: 12px; font-weight: 600; color: #c4d0e7;">Pep Guardiola</p>
-    </div>
-
-    <div style="
-      flex: 0 0 280px;
-      background: rgba(30, 45, 75, 0.85);
-      border-radius: 24px;
-      padding: 20px;
-      scroll-snap-align: start;
-      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
-      text-align: center;
-    ">
-      <img src="deschamps.png" alt="Didier Deschamps" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; margin-bottom: 16px;" />
-      <p style="color: #d0d7e6; font-style: italic;">"C’est un outil qui apporte des détails essentiels à la performance individuelle et collective."</p>
-      <p style="margin-top: 12px; font-weight: 600; color: #c4d0e7;">Didier Deschamps</p>
-    </div>
-
-    <div style="
-      flex: 0 0 280px;
-      background: rgba(30, 45, 75, 0.85);
-      border-radius: 24px;
-      padding: 20px;
-      scroll-snap-align: start;
-      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
-      text-align: center;
-    ">
-      <img src="ancelotti.jpg" alt="Carlo Ancelotti" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; margin-bottom: 16px;" />
-      <p style="color: #d0d7e6; font-style: italic;">"Une bonne vidéo vaut plus que mille mots. Elle parle directement aux joueurs."</p>
-      <p style="margin-top: 12px; font-weight: 600; color: #c4d0e7;">Carlo Ancelotti</p>
-    </div>
-  </div>
-</section>
-
-
-  <section aria-labelledby="analyse-collective">
-    <h2 id="analyse-collective">Analyse vidéo collective</h2>
-    <p>
-      Un accompagnement visuel et structuré tout au long de la saison : analyse de vos matchs pour identifier axes d’amélioration, mettre en valeur vos forces et renforcer votre projet de jeu. Vous bénéficiez de rapports clairs, séquences commentées, et suivi ultra personnalisé. C'est comme un membre du staff supplémentaire.
-    </p>
-    <div class="gallery">
-      <img src="enrique.png" alt="Luis Enrique" />
-    </div>
-    <div class="cta-container">
-      <a class="cta-btn" href="sms:+33612345678">Discutons-en ensemble</a>
-    </div>
-  </section>
-
-  <section aria-labelledby="match-decisif">
-    <h2 id="match-decisif">Un match décisif à préparer ?</h2>
-    <p>
-      Pour un match crucial en vue du maintien ou de la montée, chaque détail compte. J’élabore une analyse ciblée et pragmatique qui permet à vos joueurs d’aborder la rencontre avec lucidité, clarté tactique et confiance : l'analyse vidéo peut changer drastiquement l'issue de votre saison.
-    </p>
-    <div class="gallery">
-      <img src="ancelotti.jpg" alt="Carlo Ancelotti" />
-    </div>
-    <div class="cta-container">
-      <a class="cta-btn" href="tel:+33612345678">Contactez-moi</a>
-    </div>
-  </section>
-
-  <section aria-labelledby="analyse-adversaire">
-    <h2 id="analyse-adversaire">Analyse de l’adversaire</h2>
-    <p>
-      Identifier les points faibles, anticiper les habitudes, surprendre l’adversaire : je propose une étude complète de vos prochains opposants, vous permettant d’adapter votre plan de jeu pour prendre l’avantage dès les premières minutes.
-    </p>
-    <div class="gallery">
-      <img src="guardiola.png" alt="Pep Guardiola" />
-    </div>
-    <div class="cta-container">
-      <a class="cta-btn" href="sms:+33612345678">Commander une analyse adverse</a>
-    </div>
-  </section>
-
-  <section aria-labelledby="analyse-individuelle">
-    <h2 id="analyse-individuelle">Analyse individuelle</h2>
-    <p>
-      Valoriser un joueur, améliorer sa lecture de jeu ou cibler un poste : une analyse personnalisée met en lumière les forces et axes de progression. Outil idéal pour accompagner formation ou retour à la compétition.
-    </p>
-    <div class="gallery">
-      <img src="messi.jpg" alt="Lionel Messi" />
-    </div>
-    <div class="cta-container">
-      <a class="cta-btn" href="tel:+33612345678">Parlons-en ensemble</a>
-    </div>
-  </section>
-
-
-</main>
-
-<footer>
-  © 2025 Antoine Bucherie – Analyste Vidéo Football – Nouvelle-Aquitaine & Occitanie
-</footer>
-
-</body>
-</html>
+\f1 \uc0\u55356 \u57253 
+\f0  <strong>Boostez les performances de votre club gr\'e2ce \'e0 l\'92analyse vid\'e9o professionnelle</strong>\
+    </p>\
+    <ul style="list-style: none; padding-left: 0;">\
+      <li>
+\f1 \uc0\u10004 \u65039 
+\f0  Analyse personnalis\'e9e adapt\'e9e \'e0 vos objectifs</li>\
+      <li>
+\f1 \uc0\u10004 \u65039 
+\f0  Accompagnement local, proche de vos r\'e9alit\'e9s</li>\
+      <li>
+\f1 \uc0\u10004 \u65039 
+\f0  Tarifs accessibles, pens\'e9s pour les clubs amateurs</li>\
+      <li>
+\f1 \uc0\u10004 \u65039 
+\f0 100 % \'e0 distance, simple et flexible</li>\
+    </ul>\
+    <p>\
+      
+\f1 \uc0\u55357 \u56525 
+\f0  D\'e9placements possibles en <strong>Nouvelle-Aquitaine</strong> et <strong>Occitanie</strong><br>\
+\
+      <div class="cta-container" role="group" aria-label="Contacts pour Antoine Bucherie" style="margin-top: 10px;">\
+        <a class="cta-btn" href="sms:+33 6 99 33 53 52">Demandez votre premi\'e8re analyse 100% gratuite</a>\
+\
+  </div>\
+</section>\
+    </p>\
+  </div>\
+</section>\
+\
+<main>\
+  <section aria-labelledby="qui-suis-je">\
+  <div class="intro-grid">\
+    <img src=\'ab\'a0antoine.JPG" alt="Photo professionnelle d'Antoine Bucherie" />\
+    <div class="intro-text">\
+      <h2 id="qui-suis-je">Qui suis-je ?</h2>\
+      <p>\
+  Je m\'92appelle <strong>Antoine Bucherie</strong>, j\'92ai 24 ans, je suis <strong>coach dipl\'f4m\'e9</strong> et <strong>joueur de football</strong>.<br><br>\
+  Dipl\'f4m\'e9 d\'92une <strong>licence STAPS \'e0 l\'92Universit\'e9 de Bordeaux</strong> et d\'92un <strong>Dipl\'f4me Universitaire en Analyse Vid\'e9o et Performance Sportive \'e0 l\'92Universit\'e9 de Rouen</strong>, j\'92ai eu l\'92opportunit\'e9 de collaborer avec le <strong>FC Girondins de Bordeaux</strong>.<br><br>\
+  Aujourd\'92hui, j\'92accompagne les <strong>clubs amateurs et semi-professionnels</strong> en leur proposant une <strong>analyse vid\'e9o structur\'e9e, technique et professionnalisante</strong>.<br><br>\
+  Mon objectif : <strong>mettre mon expertise au service de votre projet sportif</strong>, avec rigueur, engagement et une r\'e9elle volont\'e9 d\'92am\'e9lioration de la performance collective et individuelle.\
+      </p>\
+      \
+      <!-- Boutons rapproch\'e9s -->\
+      <div class="cta-container" role="group" aria-label="Contacts pour Antoine Bucherie" style="margin-top: 10px;">\
+        <a class="cta-btn" href="sms:+33 6 99 33 53 52">Envoyer un SMS</a>\
+        <a class="cta-btn" href="tel:+33 6 99 33 53 52">Appelons-nous</a>\
+  </div>\
+</section>\
+\
+<section aria-labelledby="mes-services" class="services-section" style="padding: 2rem 0;">\
+  <div class="services-content" style="max-width: 800px; margin: 0 auto; padding: 0 1rem;">\
+    <h2 id="mes-services">MES SERVICES : <span style="font-weight: normal;">Analyses collectives</span></h2>\
+    \
+    <p>\
+      <strong>Un accompagnement structur\'e9 et visuel</strong> tout au long de la saison.\
+      J\'92analyse vos matchs pour <strong>identifier les axes d\'92am\'e9lioration</strong>, <strong>valoriser vos forces</strong> et <strong>renforcer votre projet de jeu</strong>.\
+      Vous recevez <strong>des rapports clairs</strong>, <strong>des s\'e9quences comment\'e9es</strong>, et <strong>un suivi ultra-personnalis\'e9</strong>.\
+    </p>\
+    <p>\
+      <strong>Un membre du staff en plus</strong>, d\'e9di\'e9 \'e0 la vid\'e9o.\
+\
+    </p>\
+    <div class="gallery">\
+      <img src="enrique.png" alt="Luis Enrique" />\
+    </div>\
+    <div class="cta-container">\
+      <a class="cta-btn" href="sms:+33 6 99 33 53 52">Discutons-en ensemble</a>\
+    </div>\
+  </section>\
+\
+  </section> <!-- analyses collectives -->\
+\
+<section aria-labelledby="services-individuels" class="services-section" style="padding: 2rem 0;">\
+  <div class="services-content" style="max-width: 800px; margin: 0 auto; padding: 0 1rem;">\
+    <h2 id="services-individuels">MES SERVICES : <span style="font-weight: normal;">Analyses individuelles</span></h2>\
+    \
+    <p>\
+      <strong>Valoriser un joueur</strong>, <strong>am\'e9liorer sa lecture de jeu</strong>, ou <strong>cibler un poste sp\'e9cifique</strong> :\
+      l\'92analyse individuelle permet de <strong>mettre en lumi\'e8re ses points forts</strong> et d\'92<strong>identifier ses axes de progression</strong>.\
+      Un <strong>outil sur-mesure</strong>, id\'e9al pour accompagner un joueur <strong>en formation</strong>, <strong>en phase de d\'e9veloppement</strong> ou <strong>en retour \'e0 la comp\'e9tition</strong>.\
+\
+    </p>\
+    <div class="gallery">\
+      <img src="messi.jpg" alt="Lionel Messi" />\
+    </div>\
+    <div class="cta-container">\
+      <a class="cta-btn" href="tel:+33 6 99 33 53 52">Contactez-moi</a>\
+    </div>\
+  </section>\
+\
+  <section aria-labelledby="services-adversaire" class="services-section" style="padding: 2rem 0;">\
+  <div class="services-content" style="max-width: 800px; margin: 0 auto; padding: 0 1rem;">\
+    <h2 id="services-adversaire">MES SERVICES : <span style="font-weight: normal;">Analyses de l\'92adversaire</span></h2>\
+    \
+    <p>\
+      <strong>Identifier les faiblesses</strong>, <strong>anticiper les automatismes</strong>, <strong>surprendre l\'92adversaire</strong> :<br>\
+      j\'92analyse vos prochains opposants pour vous aider \'e0 <strong>adapter votre plan de jeu</strong>, et <strong>prendre l\'92avantage d\'e8s les premi\'e8res minutes</strong>.\
+      Une <strong>pr\'e9paration cibl\'e9e</strong> qui transforme vos matchs en opportunit\'e9s.\
+    </p>\
+    <div class="gallery">\
+      <img src="guardiola.png" alt="Pep Guardiola" />\
+    </div>\
+    <div class="cta-container">\
+      <a class="cta-btn" href="sms:+33 6 99 33 53 52">Contactez-moi pour en discuter</a>\
+    </div>\
+  </section>\
+\
+<section id="tarifs" class="tarifs">\
+  <h2><strong>Mes tarifs en 3 \'e9tapes</strong></h2>\
+\
+  <div class="etape">\
+    <h3><strong>\'c9tape 1\uc0\u8239 : Nombre d\'92\'e9quipes</strong></h3>\
+    <ul>\
+      <li><strong>1 \'e9quipe</strong> : tarif standard</li>\
+      <li><strong>2 \'e9quipes</strong> : <strong>-20\uc0\u8239 %</strong> sur la 2<sup>e</sup> \'e9quipe</li>\
+      <li><strong>3 \'e9quipes ou +</strong> : tarif sur devis personnalis\'e9</li>\
+    </ul>\
+  </div>\
+\
+  <div class="etape">\
+    <h3><strong>\'c9tape 2\uc0\u8239 : Formule d\'92abonnement</strong></h3>\
+    <div class="formule">\
+      <h4>
+\f1 \uc0\u55357 \u56600 
+\f0  \'c0 l\'92unit\'e9</h4>\
+      <ul>\
+        <li>Analyse ponctuelle (1 match, 1 format)</li>\
+        <li>Pas d\'92engagement</li>\
+        <li>Livraison sous 48\'9672h</li>\
+      </ul>\
+    </div>\
+    <div class="formule">\
+      <h4>
+\f1 \uc0\u55357 \u56600 
+\f0  Mensuel</h4>\
+      <ul>\
+        <li>4 \'e0 5 matchs analys\'e9s / mois</li>\
+        <li>Suivi continu et \'e9changes avec le staff</li>\
+      </ul>\
+    </div>\
+    <div class="formule">\
+      <h4>
+\f1 \uc0\u55357 \u56600 
+\f0  Annuel</h4>\
+      <ul>\
+        <li>Jusqu\'92\'e0 5 analyses / mois</li>\
+        <li><strong>Bonus</strong> : 1 analyse gratuite / trimestre</li>\
+        <li>Acc\'e8s prioritaire, rapports comparatifs</li>\
+      </ul>\
+    </div>\
+    <div class="formule">\
+      <h4>
+\f1 \uc0\u55357 \u56600 
+\f0  Pack de matchs</h4>\
+      <ul>\
+        <li>5 / 10 / 15 matchs \'e0 consommer librement</li>\
+        <li>Bon compromis entre libert\'e9 et engagement</li>\
+      </ul>\
+    </div>\
+  </div>\
+\
+  <div class="etape">\
+    <h3><strong>\'c9tape 3\uc0\u8239 : Format d\'92analyse</strong></h3>\
+    <div class="format">\
+      <h4>
+\f1 \uc0\u55357 \u56600 
+\f0  Analyse collective</h4>\
+      <p>Am\'e9liorer les performances collectives et renforcer le projet de jeu</p>\
+    </div>\
+    <div class="format">\
+      <h4>
+\f1 \uc0\u55357 \u56600 
+\f0  Analyse individuelle</h4>\
+      <p>Valoriser un joueur, affiner son poste, accompagner son \'e9volution</p>\
+    </div>\
+    <div class="format">\
+      <h4>
+\f1 \uc0\u55357 \u56600 
+\f0  Analyse de l\'92adversaire</h4>\
+      <p>Anticiper les automatismes, adapter le plan de jeu</p>\
+    </div>\
+    <div class="format">\
+      <h4>
+\f1 \uc0\u55357 \u56600 
+\f0  Pack complet</h4>\
+      <p>Les 3 formats r\'e9unis pour une pr\'e9paration optimale</p>\
+    </div>\
+    <p class="inclus"><strong>Inclus dans chaque format</strong> : s\'e9quences vid\'e9o comment\'e9es, fiche d\'92analyse synth\'e9tique, rapport vid\'e9o</p>\
+    \
+    <!-- Boutons rapproch\'e9s -->\
+      <div class="cta-container" role="group" aria-label="Contacts pour Antoine Bucherie" style="margin-top: 10px;">\
+        <a class="cta-btn" href="sms:+33 6 99 33 53 52">Envoyer un SMS</a>\
+        <a class="cta-btn" href="tel:+33 6 99 33 53 52">Appelons-nous</a>\
+  </div>\
+</section>\
+\
+\
+\
+<section aria-labelledby="avis">\
+  <h2 id="grands-en-parlent">Ils ont donn\'e9 leur avis</h2>\
+  <div style="\
+    display: flex;\
+    overflow-x: auto;\
+    gap: 24px;\
+    scroll-snap-type: x mandatory;\
+    padding: 16px 0;\
+    -webkit-overflow-scrolling: touch;\
+  ">\
+    <div style="\
+      flex: 0 0 280px;\
+      background: rgba(30, 45, 75, 0.85);\
+      border-radius: 24px;\
+      padding: 20px;\
+      scroll-snap-align: start;\
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);\
+      text-align: center;\
+    ">\
+      <img src="mavuba.jpg" alt="Rio Mavuba" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; margin-bottom: 16px;" />\
+      <p style="color: #d0d7e6; font-style: italic;">"Antoine est goatesque."</p>\
+      <p style="margin-top: 12px; font-weight: 600; color: #c4d0e7;"<p>\
+      Rio Mavuba<br><br>\
+  13 s\'e9lections en \'c9quipe de France<br>\
+  602 matchs professionnels<br>\
+  Coach U15 R1 \'96 FC Girondins de Bordeaux\
+</p>\
+\
+    </div>\
+\
+    <div style="\
+      flex: 0 0 280px;\
+      background: rgba(30, 45, 75, 0.85);\
+      border-radius: 24px;\
+      padding: 20px;\
+      scroll-snap-align: start;\
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);\
+      text-align: center;\
+    ">\
+      <img src="baysse.png" alt="Paul Baysse" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; margin-bottom: 16px;" />\
+      <p style="color: #d0d7e6; font-style: italic;">"Antoine est goatesque."</p>\
+      <p style="margin-top: 12px; font-weight: 600; color: #c4d0e7;"<p>\
+      Paul Baysse<br><br>\
+  336 matchs professionnels<br>\
+  Coach U15 R1 \'96 FC Girondins de Bordeaux\
+  </p>\
+    </div>\
+\
+    <div style="\
+      flex: 0 0 280px;\
+      background: rgba(30, 45, 75, 0.85);\
+      border-radius: 24px;\
+      padding: 20px;\
+      scroll-snap-align: start;\
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);\
+      text-align: center;\
+    ">\
+      <img src="sylvain.png" alt="Sylvain Blaquart" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; margin-bottom: 16px;" />\
+      <p style="color: #d0d7e6; font-style: italic;">"Antoine est goatesque."</p>\
+      <p style="margin-top: 12px; font-weight: 600; color: #c4d0e7;"<p>\
+      Sylvain Blaquart<br><br>\
+  Coach U19 N \'96 Amiens SC\
+  </p>\
+    </div>\
+  </div>\
+</section>\
+\
+<section>\
+  <h2>FAQ \'96 Questions fr\'e9quentes</h2>\
+\
+  <details>\
+    <summary><strong>Quels types de vid\'e9os puis-je analyser ?</strong></summary>\
+    <p>Matchs film\'e9s avec une cam\'e9ra fixe (VEO), t\'e9l\'e9phone ou drone.<br>\
+    Id\'e9alement avec un point de vue large.</p>\
+  </details>\
+\
+  <details>\
+    <summary><strong>Sous combien de temps livrez-vous ?</strong></summary>\
+    <p>48h \'e0 72h pour une analyse compl\'e8te.</p>\
+  </details>\
+\
+  <details>\
+    <summary><strong>Et si je ne suis pas satisfait ?</strong></summary>\
+    <p>On refait ou on adapte l\'92analyse. Satisfaction garantie !</p>\
+  </details>\
+</section>\
+\
+\
+\
+\
+</main>\
+\
+<footer>\
+  \'a9 2025 Antoine Bucherie \'96 Analyste Vid\'e9o Football \'96 Nouvelle-Aquitaine & Occitanie\
+</footer>\
+\
+</body>\
+</html>}
