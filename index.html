@@ -686,7 +686,12 @@ document.querySelectorAll('.etape-header').forEach(header => {
       text-align: center;
     ">
       <img src="kevin.png" alt="Kevin Plantet" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; margin-bottom: 16px;" />
-      <p style="color: #d0d7e6; font-style: italic;">"Aujourd’hui la vidéo est un outil indispensable pour le football professionnel et amateur. L’analyse vidéo prend donc une place importante dans le travail quotidien des staffs. Nous avons en premier lieu l’analyse de notre équipe suite au match, ensuite l’analyse de l’adversaire et enfin les montages individuels. Une image valant mille mots, la vidéo est un support fondamental dans la gestion et le développement des équipes et des joueurs. J’ai pu travailler avec Antoine, il était responsable de l’analyse vidéo. Très vite, son travail a permis d’optimiser l’analyse du jeu et donc les performances de l’équipe."</p>
+      
+      <p class="avis-text" style="color: #d0d7e6; font-style: italic;" data-full='Aujourd’hui la vidéo est un outil indispensable pour le football professionnel et amateur. L’analyse vidéo prend donc une place importante dans le travail quotidien des staffs. Nous avons en premier lieu l’analyse de notre équipe suite au match, ensuite l’analyse de l’adversaire et enfin les montages individuels. Une image valant mille mots, la vidéo est un support fondamental dans la gestion et le développement des équipes et des joueurs. J’ai pu travailler avec Antoine, il était responsable de l’analyse vidéo. Très vite, son travail a permis d’optimiser l’analyse du jeu et donc les performances de l’équipe.'>
+        Aujourd’hui la vidéo est un outil indispensable pour le football professionnel et...
+      </p>
+      <button class="toggle-avis" style="margin-top: 8px; background: none; border: none; color: #c4d0e7; cursor: pointer;">Lire plus</button>
+
       <p style="margin-top: 12px; font-weight: 600; color: #c4d0e7;">
         Kevin Plantet<br><br>
         Ex-préparateur physique, puis adjoint de Jocelyn Gourvennec à Guingamp, Bordeaux, Lille et Nantes<br>
@@ -705,7 +710,12 @@ document.querySelectorAll('.etape-header').forEach(header => {
       text-align: center;
     ">
       <img src="rennes.png" alt="Emmanuel Tanguy" style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; margin-bottom: 16px;" />
-      <p style="color: #d0d7e6; font-style: italic;">"Antoine faisait partie intégrante de mon staff. C est un analyste pointilleux et performant dans le travail demandé. Ses retours vidéos, auprès du staff et des joueurs, ont été un réel soutien au quotidien pour l évolution de nos joueurs."</p>
+      
+      <p class="avis-text" style="color: #d0d7e6; font-style: italic;" data-full="Antoine faisait partie intégrante de mon staff. C'est un analyste pointilleux et performant dans le travail demandé. Ses retours vidéos, auprès du staff et des joueurs, ont été un réel soutien au quotidien pour l évolution de nos joueurs.">
+        Antoine faisait partie intégrante de mon staff. C'est un analyste pointilleux et per...
+      </p>
+      <button class="toggle-avis" style="margin-top: 8px; background: none; border: none; color: #c4d0e7; cursor: pointer;">Lire plus</button>
+
       <p style="margin-top: 12px; font-weight: 600; color: #c4d0e7;">
         Emmanuel Tanguy<br><br>
         Ex-directeur de Cap Girondins<br>
@@ -717,9 +727,24 @@ document.querySelectorAll('.etape-header').forEach(header => {
   </div>
 </section>
 
+<script>
+document.querySelectorAll('.toggle-avis').forEach(button => {
+  button.addEventListener('click', () => {
+    const p = button.previousElementSibling;
+    if(button.textContent === "Lire plus") {
+      p.textContent = p.dataset.full;
+      button.textContent = "Réduire";
+    } else {
+      p.textContent = p.dataset.full.substring(0, 100) + '...';
+      button.textContent = "Lire plus";
+    }
+  });
+});
+</script>
 
-  </div>
-</section>
+
+
+
 
 <section>
   <h2>FAQ – Questions fréquentes</h2>
